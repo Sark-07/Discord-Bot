@@ -1,4 +1,6 @@
 const discord = require('discord.js')
+const {readFile, readFileSync} = require('fs')
+const token = readFileSync('./Token.txt', 'utf-8');
 const client = new discord.Client();
 const redditImageFetcher = require("reddit-image-fetcher");
 const arr = ['is jarvis a madarchod?', 'is talukdar a madarchod?', 'is sudipto a madarchod?', 'is biswa a madarchod?', 'is deep a madarchod?']
@@ -48,4 +50,4 @@ client.on('message', msg => {
 
 
 
-client.login('ODU2ODkyMDc5NjMyNjc4OTEz.YNHo8A.fCr23I6XuquRDqGdcRxtXtP64dM');
+client.login(token);
