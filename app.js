@@ -1,5 +1,5 @@
 const discord = require('discord.js')
-const {readFile, readFileSync} = require('fs')
+const { readFileSync } = require('fs')
 const token = readFileSync('./Token.txt', 'utf-8');
 const client = new discord.Client();
 const redditImageFetcher = require("reddit-image-fetcher");
@@ -8,7 +8,6 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity("Prime", { type: "LISTENING" });
 });
-
 client.on('message', msg => {
 
     if (msg.content.startsWith("*meme")) {
@@ -20,7 +19,8 @@ client.on('message', msg => {
                     addSubreddit: ['memes', 'funny'],
                 }).then(result => {
                     console.log(result);
-                    msg.reply(`${result[Math.floor(Math.random() * 51)].title}
+                    (result[Math.floor(Math.random() * 51)].title, result[Math.floor(Math.random() * 51)].image)
+                    msg.channel.send(`${result[Math.floor(Math.random() * 51)].title}
                             ${result[Math.floor(Math.random() * 51)].image}`);
                 });
             } catch (error) {
@@ -29,7 +29,6 @@ client.on('message', msg => {
         }
         startMeme()
         msg.reply("Hang in there!")
-
     }
 
     if (msg.content.toLowerCase() === "who is the leader?") {
@@ -47,7 +46,5 @@ client.on('message', msg => {
         }
     })
 });
-
-
 
 client.login(token);
