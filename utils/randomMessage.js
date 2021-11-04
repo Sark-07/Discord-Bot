@@ -8,7 +8,7 @@ const startRandomMessege = async (msg) => {
             msg.reply('Prime is a good boi!!');
         }
         else {
-           return await fetch(`https://api.monkedev.com/fun/chat?msg=${randomMessege}&uid=${process.env.API_KEY}&key=konhR8gVgWPfqVWPrEeIoimjQ
+           return await fetch(`https://api.monkedev.com/fun/chat?msg=${randomMessege}&uid=${process.env.USER_ID}&key=${API_KEY}
                 `).then((res) => {
                 return res.json();
             }).then((result) => {
