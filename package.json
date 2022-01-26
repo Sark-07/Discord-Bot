@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "node-fetch": "^2.6.1",
+    "google-tts-api": "^2.0.2",
+    "node-fetch": "^2.6.7",
     "reddit-image-fetcher": "^2.0.7"
   },
   "devDependencies": {

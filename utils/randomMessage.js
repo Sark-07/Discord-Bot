@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-require('dotenv/config')
+require('dotenv').config()
 const startRandomMessege = async (msg) => {
     try {
         console.log(msg);
@@ -8,7 +8,7 @@ const startRandomMessege = async (msg) => {
             msg.reply('Prime is a good boi!!');
         }
         else {
-           return await fetch(`https://api.monkedev.com/fun/chat?msg=${randomMessege}&uid=${process.env.USER_ID}&key=${API_KEY}
+           return await fetch(`https://api.monkedev.com/fun/chat?msg=${randomMessege}&uid=${process.env.USER_ID}&key=${process.env.API_KEY}
                 `).then((res) => {
                 return res.json();
             }).then((result) => {

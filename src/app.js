@@ -9,18 +9,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity("Prime", { type: "LISTENING" });
 });
-// client.on('voiceStateUpdate', (oldChannelId, newChannelId)=> {
-//     const newChannel = oldChannelId.channelID;
-//     const oldChannel = newChannelId.channelID;
-//     const member = newChannelId.member.id;
-//     const textChannel = client.channels.cache.get(731882580047167561);
-//     if(member === 664193352807219226 && newChannel === '731901011639402670'){
-//         console.log(member);
-//     }
-//     // console.log(oldChannel);
-//     // console.log(newChannel);
-//     // console.log(member);
-// })
+
 client.on('message', msg => {
 
     if (!msg.content.startsWith("* ") && msg.content.toLowerCase().includes("prime") || msg.content.toLowerCase().includes("pritam")) {
@@ -51,7 +40,7 @@ client.on('message', msg => {
         }
     }
     if (msg.content.toLowerCase() === "who is the leader?") {
-        msg.reply("Mystical-joy is the leader but we don't accept him as a leader!");
+        msg.reply("Skrocks69 is the leader but we don't accept him as a leader!");
     }
     if (msg.content.toLowerCase() === "who is the madarchod?") {
         msg.reply('Everyone knows that talukdar is the madarchod of all time!!');
