@@ -5,7 +5,7 @@ const startRandomMessege = async (msg) => {
         console.log(msg);
         const randomMessege = msg.split("* ")[1];
         if (randomMessege.toLowerCase().includes('prime') || randomMessege.toLowerCase().includes('pritam')) {
-            msg.reply('Prime is a good boi!!');
+             return `\`Prime is a good boi!!\``;
         }
         else {
            return await fetch(`https://api-monkedev.herokuapp.com/fun/chat?msg=${randomMessege}&uid=${process.env.USER_ID}&key=${process.env.API_KEY}
