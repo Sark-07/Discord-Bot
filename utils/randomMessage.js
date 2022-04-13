@@ -8,8 +8,8 @@ const startRandomMessege = async (msg) => {
             msg.reply('Prime is a good boi!!');
         }
         else {
-           return await fetch(`https://api.monkedev.com/fun/chat?msg=${randomMessege}&uid=${process.env.USER_ID}&key=${process.env.API_KEY}
-                `).then((res) => {
+           return await fetch(`https://api-monkedev.herokuapp.com/fun/chat?msg=${randomMessege}&uid=${process.env.USER_ID}&key=${process.env.API_KEY}
+           `).then((res) => {
                 return res.json();
             }).then((result) => {
                 // console.log(result.response);
